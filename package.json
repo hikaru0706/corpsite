@@ -1,0 +1,31 @@
+{
+  "name": "corpsite",
+  "version": "1.0.0",
+  "description": "this project is corpsite of voyager",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build --workspaces",
+    "release": "npm run build --workspaces && cd packages/cdk && cdk deploy"
+
+  },
+  "keywords": [
+    "monorepo",
+    "voyager"
+  ],
+  "author": "hikaru miyashita",
+  "private": true,
+  "license": "ISC",
+  "workspaces": [
+    "packages/front",
+    "packages/cdk"
+  ],
+  "devDependencies": {
+    "@aws-cdk/aws-cloudfront": "^1.160.0",
+    "@aws-cdk/aws-route53-targets": "^1.160.0",
+    "@aws-cdk/aws-s3": "^1.160.0"
+  },
+  "dependencies": {
+    "@types/jest": "^27.5.2"
+  }
+}
